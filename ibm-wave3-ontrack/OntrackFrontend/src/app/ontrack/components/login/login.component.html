@@ -1,0 +1,41 @@
+ <div class="container" >
+ <mat-card class="pics">
+  <h1>Login</h1>
+ <form [formGroup]="user" (ngSubmit)="login()">
+  <mat-form-field appearance="outline" class="id">
+     <mat-label>Email-Id</mat-label>
+     <input
+      matInput
+      placeholder="Email"
+      formControlName="userId"
+      [errorStateMatcher]="matcher"
+      [(ngModel)]="userId"
+      name="emaiId"
+      required
+     />
+     <mat-error
+      *ngIf="
+       emailFormControl.hasError('email') &&
+       !emailFormControl.hasError('required')
+      "
+     >
+      Please enter a valid email address
+     </mat-error>
+     <mat-error *ngIf="emailFormControl.hasError('required')">
+      Email is <strong>required</strong>
+     </mat-error>
+    </mat-form-field>
+  <mat-form-field appearance="outline" class="password" style="color:white">
+  <mat-label>Password</mat-label>
+  <input matInput placeholder="Enter your password" type="password"
+   formControlName="password" required />
+  <mat-hint></mat-hint>
+  </mat-form-field>
+  <div mat-card-action>
+  <button mat-raised-button class = "btn" color="primary" type="submit" [disabled]="!user.valid" (click) = "login()">Login</button>
+  <p>Have you registered yet or not?</p> 
+  <button (click) = "signup()" mat-button class="btn1" color="primary">Register</button>
+ </div>
+ </form>
+</mat-card>
+ </div>

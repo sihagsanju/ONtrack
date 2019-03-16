@@ -1,0 +1,31 @@
+<header>
+  <!-- <nav class="navbar fixed-top navbar-expand-lg navbar-dark pink scrolling-navbar"> -->
+  <div class="row1">
+    <img src="./assets/img/title.png">
+    <h3><a href="Home">SHOEFLY</a></h3>
+    <div class = "row">
+      <input type="text" #myInput [(ngModel)]="productName" (input)="search($event.target.value)" placeholder="search by brand"/>
+    <button class="button" mat-raised-button matTooltip="SEARCH"
+    aria-label="Button that displays a tooltip when focused or hovered over" (click)="searchbar()" ><mat-icon>search</mat-icon></button>
+    </div>
+          <div class="wrap" *ngIf=userLogged>
+        <mat-card-actions>
+            <button mat-raised-button (click)="Login()">Login</button>
+            </mat-card-actions>
+          </div>
+          <div class="wrap1"  *ngIf=flag>
+            <mat-card-actions>
+                <button mat-raised-button (click)="Logout()">Logout</button>
+                </mat-card-actions>
+              </div>
+          <div class="sak">
+          <button mat-raised-button matTooltip="CART ITEMS"
+          aria-label="Button that displays a tooltip when focused or hovered over" (click)="Cartbutton()"><mat-icon>shopping_cart</mat-icon></button>
+        </div>
+        <div class="vak" *ngIf=userLoggedIn>
+          <button mat-raised-button matTooltip="USER PROFILE"
+          aria-label="Button that displays a tooltip when focused or hovered over" (click)="profile()"><mat-icon>account_circle</mat-icon></button>
+        </div>   
+  </div>
+<!-- </nav> -->
+</header>

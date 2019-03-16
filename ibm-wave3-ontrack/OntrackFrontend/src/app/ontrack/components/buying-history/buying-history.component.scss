@@ -1,0 +1,127 @@
+  .sing{
+     margin-left: 100px;
+  }
+  .section{
+   margin-right: 60px;
+   margin-top:150px;
+   padding-bottom: 120px;
+   padding-left: 100px;
+   float: right;
+   width: 400px;
+  }
+ 
+  .lays{
+   float: right;
+  position: fixed;
+  }
+  .product--blue {
+     display:flex;
+   box-shadow: 1px 5px 15px #ccc;
+   width: 32.5em;
+   border-radius: 3px;
+    padding: 1em;
+    margin-left: 110px;
+   overflow: auto;
+   position: absolute;
+   height: 230px;
+   flex: auto;
+   margin-top: 0.9px;
+ 
+  }
+  mat-card-header {
+  margin-left:0px;
+   margin-top: 12px;
+ 
+  }
+  mat-card-footer {
+     position: absolute;
+     margin-top:160px;
+     margin-left: 50px;
+ 
+    }
+  mat-card-title {
+   position: absolute;
+   font-size: 15px;
+   left: 20px;
+   top: 10px;
+  }
+  mat-card-actions {
+   padding-top: 0px;
+   position: absolute;
+   bottom: 1px;
+  }
+  .mat-card-actions,
+  .mat-card-content,
+  .mat-card-subtitle {
+   display: block;
+   margin-bottom: 10px;
+  }
+  .column{
+   bottom: 0%;
+  }
+  .row {
+   padding-top: 230px;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: flex-start;
+   padding-bottom: 1px;
+   padding-left: 14.5px;
+  }
+  mat-card-action button {
+   border: 1px solid rgba(255, 255, 255, 0.5);
+   color: black;
+   border-radius: 3px;
+   padding: 1em 3em;
+   margin: 1em 0 0 0;
+   background: none;
+   cursor: pointer;
+  }
+  mat-card-action button:hover {
+   background: white;
+   color: #2b2d42;
+  }
+  mat-card-action button:before {
+   font-family: FontAwesome;
+   content: "\f07A";
+   color: #fff;
+   position: absolute;
+   font-size: 1.5em;
+   margin: 0 -1.5em;
+  }
+  mat-card-action button:hover:before {
+   color: #2b2d42;
+  }
+  .remov {
+   padding-left: 180px;
+   position: relative;
+  }
+  .next {
+  margin-left: 16px;
+ 
+ 
+   position: fixed;
+   bottom: 80px;
+ 
+  }
+  .continuenext{
+     margin-left: 100px;
+     top: 40px;
+     padding-right: 40px;
+  }
+  .continueproduct {
+     right: 40px;
+   bottom:10px;
+  }
+  .buyproduct{
+   bottom:10px;
+  }
+  .footer{
+     width: 32.5em;
+     height: 20px;
+     bottom: 0px;
+     height: 50px;
+     position:fixed;
+     margin-left: 1030px;
+     display:flex;
+  }
+ 

@@ -1,0 +1,48 @@
+<div class="section" >
+  <mat-card class="lays">
+      <div class="bingo">
+    <mat-list>
+        <mat-list-item>PRICE DETAILS</mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>PRICE({{products.length}} items)</mat-list-item>
+        <hr style="border: 0.3px dashed grey;" />
+        <div *ngFor='let o of products'>
+        <mat-list-item>{{o.brand}}:
+            ₹{{o.price}}</mat-list-item>
+        </div>
+        <mat-divider></mat-divider> 
+        <mat-list-item>TOTAL AMOUNT:₹{{totalPrice()}}</mat-list-item>
+        <div *ngFor='let o of products'>
+       
+        <p>{{ sum }}</p>
+        </div>
+      </mat-list> 
+  </div>
+  </mat-card>
+  </div>
+<div class="row" fxLayout.xs="column" *ngFor='let o of products'>
+  <mat-card class='product--blue'>
+    <mat-card-header>  
+        <img mat-card-md-image src="{{o.imageURL}}" alt="{{o.brand}}">
+        </mat-card-header>         
+      <div class="sing">
+        <p>{{ o.productName }}</p>
+        <h3>₹{{ o.price +"/-"}}</h3>
+        <p style='text-decoration:line-through'>₹{{ o.mrp }}</p>
+        <p style="color:green">Discount: {{(((o.mrp-o.price)/o.mrp)*100) | number: '1.0-1'}}% Off</p>
+      </div>
+      <mat-card-footer>
+          <button mat-raised-button (click)="remove3(o)">REMOVE</button>
+      </mat-card-footer>
+</mat-card>
+</div>
+
+<div class="next">
+<mat-card class="footer">
+    <div  class="continuenext">
+      <button mat-raised-button class="continueproduct" style="background:orange; color:white" (click)="continue3()">CONTINUE SHOPPING</button>
+      <button mat-raised-button class="buyproduct" style="background:green; color:white" (click)="buy3()">BUY</button>
+      </div>
+</mat-card>
+</div>
+

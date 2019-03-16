@@ -1,0 +1,95 @@
+.example-card {
+  top: 150px;
+  width: 400px;
+  height: 425px;
+  left: 30px;
+  right: 30px;
+ box-shadow: 3px 3px 3px 3px black;
+  border-color: black;
+  margin: 25px;
+ }
+ .sea{
+  padding-left: 13px;
+  margin-top: 10px;
+ }
+ .bharath{
+  padding-left: 13px;
+  margin-top: 10px;
+ }
+ .sing{
+   display: flex;
+   margin-left:  10px;
+   margin-bottom: 10px;
+ }
+ .container{
+  display:flex;
+ }
+ .product--blue{
+  box-shadow: 1px 5px 15px #CCC;
+  width: 24.5em;
+  height: 450px;
+  border-radius: 3px;
+  padding: 2em;
+  margin: 1em;
+  overflow: auto;
+  position: relative;
+  flex: auto;
+  left: 50px;
+ }
+ mat-card-title{
+  position: absolute;font-size: 20px;
+  left: 20px;
+  top: 10px;
+ }
+ mat-card-actions{
+  position:absolute;
+  margin-top: 5px;
+ }
+ mat-card-content img{
+ padding-left: 50px;
+ height: 245px;
+ width: 250px;
+ padding-top: 20px
+ }
+ .mat-card-actions, .mat-card-content, .mat-card-subtitle {
+  display: block;
+  margin-bottom: 10px;
+ }
+ .row{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding-bottom: 50px;
+  padding-left: -10px;
+ }
+ mat-card-actions{
+   padding-left: 50px;
+ }
+ mat-card-action button {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: black;
+  border-radius: 3px;
+  padding: 1em 3em;
+  margin: 1em 0 0 0;
+  background-color: black;
+  cursor: pointer;
+ }
+ mat-card-footer{
+   bottom:2px;
+ }
+ mat-card-action button:hover {
+ background: white;
+   color: #2B2D42;
+ }
+ mat-card-action button:before {
+  font-family: FontAwesome;
+  content: '\f07A';
+  color: #FFF;
+  position: absolute;
+  font-size: 1.5em;
+  margin: 0 -1.5em;
+ }
+ mat-card-action button:hover:before {
+  color: #2B2D42;
+ }

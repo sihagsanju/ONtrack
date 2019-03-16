@@ -1,0 +1,49 @@
+{"slotsAvailable": [
+        {
+            "date": "2019-02-23",
+            "slots": [
+                {
+                    "slotNumber": "Slot 1",
+                    "slotStatus": true,
+                    "slotType": "9:00AM-12:00PM",
+                    "cost": 30
+                },
+                {
+                    "slotNumber": "Slot 2",
+                    "slotStatus": false,
+                    "slotType": "2:00PM-5:00PM",
+                    "cost": 40
+                },
+                {
+                    "slotNumber": "Slot 3",
+                    "slotStatus": true,
+                    "slotType": "6:00PM-9:00PM",
+                    "cost": 100
+                }
+                    ]
+        },
+        {
+            "date": "2019-02-24",
+            "slots": [
+                {
+                    "slotNumber": "Slot 1",
+                    "slotStatus": false,
+                    "slotType": "9:00AM-12:00PM",
+                    "cost": 60
+                },
+                {
+                    "slotNumber": "Slot 2",
+                    "slotStatus": true,
+                    "slotType": "2:00PM-5:00PM",
+                    "cost": 80
+                },
+                {
+                    "slotNumber": "Slot 3",
+                    "slotStatus": true,
+                    "slotType": "6:00PM-9:00PM",
+                    "cost": 100
+                }
+                    ]
+        }
+                        ]
+                    }

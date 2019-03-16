@@ -1,0 +1,54 @@
+<div class="row" fxLayout.xs="column">
+  <div fxLayout="" fxLayoutGap="32px" fxLayoutAlign="flex-start" *ngFor='let o of products'>
+      <div fxFlex="20%">
+  <mat-card class='product--blue'>
+      <mat-card-title>
+          <p>{{o.brand}}</p>
+      </mat-card-title>
+    <mat-card-content>
+        <img mat-card-lg-image src="{{o.imageURL}}" alt="{{o.brand}}" align="center">
+        </mat-card-content>
+        <p style='text-align:center'>{{ o.productName }}</p>
+        <div class="sing">
+            <h4>₹{{ o.price +"/-"}}</h4>
+            <p class="sea" style='text-decoration:line-through'>₹{{ o.mrp }}</p>
+            <p class="bharath" style="color:green">Discount: {{(((o.mrp-o.price)/o.mrp)*100) | number: '1.0-0'}}% Off</p>
+          </div>
+        <mat-card-footer>
+        <mat-card-actions>
+           <button mat-raised-button matTooltip="DETAILS"
+           aria-label="Button that displays a tooltip when focused or hovered over" (click)="openDialog(o)"><mat-icon>toc</mat-icon></button>
+              <button mat-raised-button matTooltip="ADD TO CART"
+              aria-label="Button that displays a tooltip when focused or hovered over" (click)="AddToCart(o)"><mat-icon>add_shopping_cart</mat-icon></button>
+              <button mat-raised-button matTooltip="BUY"
+              aria-label="Button that displays a tooltip when focused or hovered over" (click)="buys()"><mat-icon>flash_on</mat-icon></button>
+        </mat-card-actions>
+      </mat-card-footer>
+ </mat-card>
+ </div>
+  </div>
+ </div>
+
+<!-- <div class="row">
+  <div class="col-4" *ngFor='let o of products'>
+    <section class="p-10">
+        <mat-card class='product--blue'>
+            <mat-card-header>  
+                <img mat-card-image src="{{o.imageURL}}" alt="{{o.brand}>
+              
+                <mat-card-title>
+                    <p>{{o.brand}}</p>
+                </mat-card-title>
+                <mat-card-actions align="center">
+                    
+                   <button mat-raised-button (click)="openDialog(o)"><mat-icon>toc</mat-icon></button>
+                      <button mat-raised-button (click)="AddToCart(o)"><mat-icon>add_shopping_cart</mat-icon></button>
+                      <button mat-raised-button (click)="buys()"><mat-icon>flash_on</mat-icon></button>
+                </mat-card-actions>
+          </mat-card-header> 
+        </mat-card>
+    </section>
+
+  </div>
+
+</div> -->

@@ -1,0 +1,72 @@
+create(f:Female{name:"Female"})
+
+create(f:Male{name:"Male})
+
+create (p:Product{productId:"0",productName:"product",productType:"",productTypeId:"",imageURL:"",mrp:"",price:"",dimension:"",weight:"",size:"",gender:"",description:"",brand:"",brandId:"",colour:""})
+
+create(u:User{dateOfBirth:"dd/mm/yyyy",password:"password",phoneno:"1243243657",userId:"1",userName:"User"})
+
+match (a:User),(b:Product) where a.userName="User" AND b.productName="product" create (a)-[: PURCHASES]->(b) return a,b
+
+create(p:Product{brand:"Adidas",brandId:"3",colour:"Sky Blue",description:"Female sailors for occasional sailing",dimension:"14*10*5",gender:"Female",imageURL:"https://contents.mediadecathlon.com/p1201493/k$252e6bf287ea4442f7db194c50bc9487/100-women-s-sailing-boat-shoes-turquoise-green-dark-blue.jpg?&f=800x800",mrp:"3999",price:"2500",productId:"96",productName:"Latest Women Sport Shoes",productType:"Female Sport Shoes",productTypeId:"1",size:"6 7 8 9",weight:"490gm"})
+
+
+create(p:Product{brand:"Red Tape",brandId:"2",colour:"white",description:"flexible running shoes for men",dimension:"14*10*5",gender:"Male",imageURL:"https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/6837271/2018/7/3/9f53a600-9b03-4210-af46-e958915f8d6e1530609306864-Red-Tape-Men-Off-White-Walking-Shoes-7341530609306715-1.jpg",mrp:"2000",price:"1499",productId:"1",productName:"Red Tape Walking Shoes",productType:"Sports Shoes",productTypeId:"1",size:"7 8 9 10",weight:"750gm"})
+
+create(p:Product{brand:"Adidas",brandId:"3",colour:"black",description:"Black and Blue running shoes",dimension:"14*10*5",gender:"Male",imageURL:"https://rukminim1.flixcart.com/image/880/1056/j5y7gcw0/shoe/n/p/2/galactus-2-0-m-8-adidas-cblack-ftwwht-corblu-original-imaewgfzhnsb9k8f.jpeg?q=50",mrp:"1500",price:"999",productId:"2",productName:"Galactus Running Shoes",productType:"Sports Shoes",productTypeId:"1",size:"7 8 9 10",weight:"750gm"})
+
+
+create(p:Product{brand:"Jordens",brandId:"8",colour:"black,white",description:"Men Air Jorden 3",dimension:"14*10*5",gender:"Male",imageURL:"https://sneakerbardetroit.com/wp-content/uploads/2018/03/Air-Jordan-11-Concord-2018.jpg",mrp:"20999",price:"20999",productId:"12",productName:"Air Jorden 3",productType:"Sneakers",productTypeId:"2",size:"8 9 10 11 12",weight:"750gm"})
+
+
+create(p:Product{brand:"Nike",brandId:"4",colour:"Black,Orange,White",description:"Nike hanon",dimension:"14*10*5",gender:"Female",imageURL:"https://cdn.shopify.com/s/files/1/2031/6995/products/BQ6166006_1.jpg?v=1543507694",mrp:"7800",price:"7500",productId:"23",productName:"Nike hanon",productType:"Sneakers",productTypeId:"2",size:"6 7 8 9",weight:"730gm"})
+
+create(p:Product{brand:"Lavie",brandId:"23",colour:"pink,gold",description:"A pair of gold-toned and pink printed thong flip-flops",dimension:"14*10*5",gender:"Female",imageURL:"https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/5414595/2018/5/7/11525674921677-Lavie-Women-Flip-Flops-8841525674921555-1.jpg",mrp:"499",price:"245",productId:"42",productName:"Lavie Women Gold-Toned & Pink Printed Thong Flip-Flops",productType:"flip flops",productTypeId:"4",size:"4 5 6 7",weight:"80gm})
+
+
+create(p:Product{brand:"Puma",brandId:"5",colour:"black",description:"A pair of balck solid thong flip-flops Cushioned footbed Patterned synthetic outsole",dimension:"14*10*5",gender:"Female",imageURL:"https://rukminim1.flixcart.com/image/880/1056/jqpiqvk0/slipper-flip-flop/p/y/v/36488201-6-puma-black-white-original-imafcja9hwth4gsu.jpeg?q=50",mrp:"699",price:"455",productId:"49",productName:"Puma",productType:"flip flops",productTypeId:"4",size:"4 5 6 7",weight:"80gm})
+
+
+create(p:Product{brand:"Gucci",brandId:"9",colour:"Black",description:"Gucci Black sneaker",dimension:"14*10*5",gender:"Male",imageURL:"https://cdnd.lystit.com/1200/630/tr/photos/gucci/440724A38Q01065-black%20leather-a80128fd-.jpeg",mrp:"13999",price:"13999",productId:"14",productName:"Gucci Black",productType:"Sneakers",productTypeId:"2",size:"7 8 9 10 11",weight:"750gm"})
+
+
+create(p:Product{brand:"Casual Wear",brandId:"40",colour:"Peach",description:"Wedges for Women",dimension:"14*10*5",gender:"Female",imageURL:"https://i.pinimg.com/originals/63/5a/fe/635afeaedb12ec101abd696593bfc283.jpg",mrp:"20,000",price:"15,000",productId:"76",productName:"Espadrille Platform Wedges",productType:"Wedges",productTypeId:"8",size:"6 7 8 9 10",weight:"850gm"})
+
+
+create(p:Product{brand:"Adidas",brandId:"3",colour:"Sky Blue",description:"Female sailors for occasional sailing",dimension:"14*10*5",gender:"Female",imageURL:"https://contents.mediadecathlon.com/p1201493/k$252e6bf287ea4442f7db194c50bc9487/100-women-s-sailing-boat-shoes-turquoise-green-dark-blue.jpg?&f=800x800",mrp:"3999",price:"2500",productId:"96",productName:"Latest Women Sport Shoes",productType:"Female Sport Shoes",productTypeId:"1",size:"6 7 8 9",weight:"490gm"})
+
+
+create(p:Product{brand:"Clarks Nantasket Fly",brandId:"18",colour:"Tan",description:"Clarks Nantasket Fly Dark Tan Lee Lace up for Men",dimension:"14*10*5",gender:"Men",imageURL:"https://rukminim1.flixcart.com/image/832/832/jqidjm80/shoe/u/s/q/261333697080-8-clarks-dark-tan-lea-original-imafchrnr5mf2qca.jpeg?q=70",mrp:"7999",price:"3599",productId:"350",productName:"Clarks Nantasket Fly Dark",productType:"formal shoes",productTypeId:"3",size:"7 8 9 10",weight:"800gm"})
+
+
+create(p:Product{brand:"Vao",brandId:"53",colour:"Brown",description:"Compofortable shoes by Vao",dimension:"14*10*5",gender:"Female",imageURL:"https://images-na.ssl-images-amazon.com/images/I/71EEJxYKFXL._UY575_.jpg",mrp:"2250",price:"2150",productId:"100",productName:"Vao Sport Shoes",productType:"Female Sport Shoes",productTypeId:"1",size:"6 7 8 9",weight:"820gm"})
+
+
+create(c:Category{productType:"Wedges",productTypeId:"8"})
+
+create(c:Category{productType:"Heels",productTypeId:"6"})
+
+create(c:Category{productType:"Flip Flops",productTypeId:"4"})
+
+create(c:Category{productType:"Sneakers",productTypeId:"2"})
+
+create(c:Category{productType:"Sports Shoes",productTypeId:"1"})
+
+
+
+create(b:Brand{brandId:"23",brandName:"Lavie"})
+
+create(b:Brand{brandId:"2",brandName:"Red Tape"})
+
+create(b:Brand{brandId:"3",brandName:"Adidas"})
+
+create(b:Brand{brandId:"4",brandName:"Nike"})
+
+create(b:Brand{brandId:"5",brandName:"puma"})
+
+create(b:Brand{brandId:"8",brandName:"jordens"})
+
+
+
+
+

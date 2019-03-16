@@ -1,0 +1,242 @@
+.row1{
+    display: flex;
+}
+.row1 h3 a{
+    color: #fff; 
+    padding-top:20px;
+    font-family: 'Righteous', cursive;
+    text-decoration: none;
+}
+.button{
+    z-index: 1;
+    position: absolute;
+    margin-left:610px;
+    top:30px;
+    height:43px;
+ }
+.sak{
+    color:white;
+    position: relative;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 35px;
+}
+.sak mat-icon{
+    color:black;
+}
+.vak{
+    color:white;
+    position: relative;
+    padding-right: 40px;
+    padding-top: 35px;
+}
+.vak mat-icon{
+    color:black;
+}
+.wrap
+{
+    padding-top: 28px !important;
+
+}
+.wrap1
+{
+
+    padding-right: 10px;
+    padding-top: 28px;
+}
+header{
+    background: #2b2b2b;
+    top: 0%;
+    left: 0%;
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    height: 100px;
+}
+header img{
+    height: 100px;
+    width:200px;
+}
+form{
+    height: 400px;
+    position: relative;
+    top: 30px;
+    left: 200px;
+}
+input[type=text] {
+    width: 30%;
+    padding: 10px 10px;
+    margin: 0px 0;
+    left: 400px;
+    box-sizing: border-box;
+    color: #000;
+    position: absolute;
+    top: 30px;
+    z-index: 1;
+    position: fixed;
+  }
+  
+  .row {
+    width: 100%;
+    justify-content: flex-start;
+    display: flex;
+    flex-flow: row wrap;
+    overflow: auto;   
+  }  
+@media (max-width:1024px)
+{
+    .button {
+        z-index: 1;
+        position: absolute;
+        margin-left: 390px;
+        top: 33px;
+    }  
+ input[type=text] {
+    width: 25%;
+    padding: 10px 10px;
+    margin: 0px 0;
+    left: 400px;
+    box-sizing: border-box;
+    color: #000;
+    position: absolute;
+    top: 30px;
+    z-index: 1;
+    position: fixed;
+}
+.wrap {
+    padding-top: 35px;
+}
+}
+@media (max-width:786px){
+    input[type=text] {
+        width: 15%;
+        padding: 10px 10px;
+        margin: 0px 0;
+        left: 300px;
+        box-sizing: border-box;
+        color: #000;
+        position: absolute;
+        top: 30px;
+        z-index: 1;
+        position: fixed;
+    }
+    .button {
+        z-index: 1;
+        position: absolute;
+        margin-left: 140px;
+        top: 33px;
+    }
+    .wrap {
+        padding-top: 35px;
+    }
+}
+@media (max-width:425px){
+    header img {
+        height: 100px;
+        width: 100px;
+    }
+    input[type=text] {
+        width: 15%;
+        padding: 10px 10px;
+        margin: 0px 0;
+        left: 100px;
+        color: #000;
+        position: absolute;
+        top: 55px;
+    }
+    .button {
+        z-index: 1;
+        position: absolute;
+        margin-left: -10px;
+        top: 57px
+    }
+        .wrap {
+            padding-top: 35px;
+            position: absolute;
+            margin-left: 250px;
+            margin-top: 30px;
+    }
+    .sak {
+        color: white;
+        position: relative;
+        padding-right: 40px;
+        padding-left: 20px;
+        padding-top: 55px;
+    }
+ }
+ @media (max-width:375px){
+    header img {
+        height: 100px;
+        width: 100px;
+    }
+    input[type=text] {
+        width: 15%;
+        padding: 10px 10px;
+        margin: 0px 0;
+        left: 100px;
+        color: #000;
+        position: absolute;
+        top: 55px;
+    }
+    .button {
+        z-index: 1;
+        position: absolute;
+        margin-left: -10px;
+        top: 57px
+    }
+        .wrap {
+            padding-top: 35px;
+            position: absolute;
+            margin-left: 250px;
+            margin-top: 30px;
+    }
+    .sak {
+        color: white;
+        position: relative;
+        padding-right: 0px;
+        padding-left: 20px;
+        padding-top: 55px;
+    }
+ }
+  
+@media (max-width:320px)
+{header img
+    {
+        height: 50px;
+        width: 100px;
+    }
+
+    input[type=text] {
+        width: 19%;
+        padding: 10px 10px;
+        margin: 0px 0;
+        left: 10px;
+        box-sizing: border-box;
+        color: #000;
+        top: 100px;
+        margin-top: 22px;
+        position: absolute;
+        top: 30px;
+        z-index: 1;
+        /* position: fixed; */
+    }
+    .button {
+        z-index: 1;
+        position: absolute;
+        margin-left: -110px;
+        top: 55px;
+    }
+    .wrap {
+        position: absolute;
+        margin-left: 150px;
+        margin-top: 19px;
+    }
+    .sak {
+        color: white;
+        position: relative;
+        padding-right: 55px;
+        padding-left: 20px;
+        padding-top: 55px;
+    }
+}
+

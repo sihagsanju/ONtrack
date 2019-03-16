@@ -1,0 +1,124 @@
+<div class="container">
+  <mat-card class="example-card">
+    <!-- <mat-card-header> -->
+      <h2>Registration</h2>
+    <!-- </mat-card-header> -->
+    <mat-card-content>
+      <form class="example-form">
+        <table class="example-full-width" cellspacing="0">
+          <!-- name section -->
+          <tr>
+            <td>
+              <mat-form-field class="example-full-width-1" style="margin-bottom: -5px">
+              <input matInput placeholder="Name" [(ngModel)]="name" name="name" required>
+              </mat-form-field>
+            </td>
+          </tr>
+          <!-- email-id section -->
+          <tr>
+            <td>
+              <mat-form-field class="example-full-width" style="margin-bottom: -5px">
+                <mat-label>Email-Id</mat-label>
+                <input
+                 matInput
+                 placeholder="Email"
+                 [formControl]="emailFormControl"
+                 [errorStateMatcher]="matcher"
+                 [(ngModel)]="userId"
+                 name="emaiId"
+                 required
+                />
+                <mat-error
+                 *ngIf="
+                  emailFormControl.hasError('email') &&
+                  !emailFormControl.hasError('required')
+                 "
+                >
+                 Please enter a valid email address
+                </mat-error>
+                <mat-error *ngIf="emailFormControl.hasError('required')">
+                 Email is required
+                </mat-error>
+               </mat-form-field>
+            </td>
+          </tr>
+          <!-- password section -->
+          <tr>
+          <td><mat-form-field class="example-full-width" style="margin-bottom: -5px">
+            <input matInput placeholder="Password" [(ngModel)]="password"type="password" name="password" required >
+          </mat-form-field></td>
+          </tr>
+         <!-- mobile-number section -->
+          <tr>
+            <td>
+              <mat-form-field class="example-full-width" style="margin-bottom: -5px">
+              <input matInput placeholder="MobileNo" pattern="[^0-9][+-]?[0-9]{1,10}[^0-9]" maxlength="10"  [(ngModel)]="mobileNo" name="mobileNo" required [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
+              <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                <div *ngIf="f.password.errors.required">Contact number is required</div>
+                <div *ngIf="f.password.errors.minlength">Contact number must be at least 10 characters</div>
+            </div>
+            </mat-form-field>
+            </td>
+          </tr>
+          <!-- date-of-birth section -->
+          <tr>
+            <td>
+                <mat-form-field class="full-width" style="margin-bottom: -5px">
+                <mat-label>Date of Birth</mat-label>
+           <input matInput [matDatepicker]="picker" placeholder="Choose a date" [(ngModel)]="dateofBirth" name="dateofBirth" required>
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+            </td>
+          </tr>
+          <!-- Gender section -->
+          <tr>
+            <td>
+              <mat-form-field class="example-full-width" style="margin-bottom: -5px">
+              <input matInput placeholder="Gender" [(ngModel)]="gender" name="gender" required>
+              <mat-radio-group appearance="outline">
+                <mat-radio-button value="1">Male</mat-radio-button>
+                <mat-radio-button value="2">Female</mat-radio-button>
+              </mat-radio-group>
+              </mat-form-field>
+            </td>
+          </tr>
+  
+          <tr>
+          <td>
+              <mat-form-field class="example-full-width" style="margin-bottom: -5px">
+              <input matInput placeholder="Address" [(ngModel)]="address" name="address" required>
+              </mat-form-field>
+            </td>
+          </tr>
+          <!-- city and state section -->
+          <table class="example-full-width" cellspacing="0" style="margin-bottom: -5px"><tr>
+              <td><mat-form-field class="example-full-width" style="margin-bottom: -5px">
+              <input matInput placeholder="City" [(ngModel)]="city" name="city" required>
+            </mat-form-field></td>
+            <td><mat-form-field class="example-full-width" style="margin-bottom: -5px">
+              <input matInput placeholder="State" [(ngModel)]="state" name="state" required>
+            </mat-form-field></td>
+            
+          </tr>
+          <tr>
+            <td>
+                <mat-form-field class="example-full-width" style="margin-bottom: -2px">
+                <input matInput placeholder="Country" [(ngModel)]="country" name="country" required>
+                </mat-form-field>
+              </td>
+            </tr>
+        </table>
+          </table>
+      </form>
+      
+      <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
+    </mat-card-content>
+    <mat-card-actions>
+      <div class="regbutton">
+      <button mat-button (click)="register($event)" color="primary">Register</button>
+    </div>
+    </mat-card-actions> 
+  </mat-card> 
+  </div>
+  
