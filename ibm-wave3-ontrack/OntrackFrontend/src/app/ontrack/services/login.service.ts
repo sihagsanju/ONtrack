@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class LoginService {
-  private loginUrl = 'http://localhost:8090/api/user';  // URL to web api
+  private loginUrl = 'https://shoefly-zuul.stackroute.io/user-authentication/api/user';  // URL to web api
 
   constructor(
       private http: HttpClient, private router: Router ) {
