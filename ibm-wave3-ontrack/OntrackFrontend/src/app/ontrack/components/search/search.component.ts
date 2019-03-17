@@ -50,7 +50,7 @@ ngOnInit() {
      console.log( this.ontracks);
   });
  }
- buys() {
+ buys(product) {
   //  this.route.navigate([ '/', 'buys']);;
    this.cartAddEvent.emit(product);
    this.searchService.cart = product;

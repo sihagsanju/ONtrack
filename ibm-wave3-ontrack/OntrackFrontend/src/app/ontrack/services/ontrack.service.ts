@@ -19,6 +19,10 @@ export class OnTrackService {
     constructor(private http: HttpClient) {
 
     }
+    GetProductByGender(gender: String) {
+        this.url = 'http://localhost:8083/api/v1/productsByGender?gender=' + gender;
+        return this.http.get(this.url);
+    }
    Home() {
 
     this.url = 'http://localhost:8083/api/v1/products';
