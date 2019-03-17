@@ -37,7 +37,7 @@ public class UserController {
         return responseEntity;
     }
 
-    @GetMapping("products")
+    @GetMapping("productsByGender")
     public ResponseEntity<?> getProductsByGender(@RequestParam("gender") String gender)
     {
         return new ResponseEntity<List<Product>>(userService.getProducts(gender), HttpStatus.OK);

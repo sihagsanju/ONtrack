@@ -18,5 +18,5 @@ public interface UserRepository extends Neo4jRepository<User, String> {
 
 
     @Query("MATCH (a:User),(b:Product) WHERE b.gender = {gender} AND a.gender= {gender} create (a)-[:IS_OF_GENDER]->(b) RETURN b")
-    Product getProductsByGender(@Param("gender") String gender );
+    List<Product> getProductsByGender(@Param("gender") String gender );
 }

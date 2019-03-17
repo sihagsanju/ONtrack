@@ -76,9 +76,9 @@
             <td>
               <mat-form-field class="example-full-width" style="margin-bottom: -5px">
               <input matInput placeholder="Gender" [(ngModel)]="gender" name="gender" required>
-              <mat-radio-group appearance="outline">
-                <mat-radio-button value="1">Male</mat-radio-button>
-                <mat-radio-button value="2">Female</mat-radio-button>
+              <mat-radio-group (change)="onChange($event)" appearance="outline">
+                <mat-radio-button value="Male">Male</mat-radio-button>
+                <mat-radio-button value="Female">Female</mat-radio-button>
               </mat-radio-group>
               </mat-form-field>
             </td>

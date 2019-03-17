@@ -1,11 +1,11 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
 import { RegserviceService } from '../../services/regservice.service';
 import { Myregistration } from '../../classes/Myregistration';
 import { RegistrationService } from '../../services/registration.service';
 import { HttpClient } from '@angular/common/http';
 import { registerContentQuery } from '@angular/core/src/render3';
 import { FormControl, Validators, FormGroupDirective, NgForm, FormGroup, FormBuilder } from '@angular/forms';
-import { ErrorStateMatcher, MatSnackBar } from '@angular/material';
+import { ErrorStateMatcher, MatSnackBar, MatRadioChange, MatRadioButton } from '@angular/material';
 import { Address } from '../../classes/address';
 import { Router } from '@angular/router';
 
@@ -65,6 +65,15 @@ export class RegistrationcompComponent implements OnInit {
   private country: string;
   private myaddress: Address;
   formBuilder: any;
+  onChange(mrChange: MatRadioChange) {
+    console.log('@@@@@@@@@@@@@@@@', mrChange.value);
+    this.gender =  mrChange.value;
+    let mrButton: MatRadioButton = mrChange.source;
+    console.log('**********', mrButton.name);
+    console.log(mrButton.name);
+    console.log(mrButton.checked);
+    console.log(mrButton.inputId);
+ }
 register(event: any) {
     this.myaddress = new Address;
     this.myaddress.addressDetails = this.address;
@@ -85,6 +94,7 @@ register(event: any) {
     console.log(this.myaddress.state);
     console.log(this.myaddress.country);
     this.value = event.target.value;
+    console.log('this is value', this.value);
     this.regserv.addregister(this.regform).subscribe(data => {
       console.log('data', data);
       this.router.navigate([`/home`]);
