@@ -20,22 +20,22 @@ export class OnTrackService {
 
     }
     GetProductByGender(gender: String) {
-        this.url = 'http://localhost:8083/api/v1/productsByGender?gender=' + gender;
+        this.url = 'https://shoefly-zuul.stackroute.io/recommendation-service/api/v1/productsByGender?gender=' + gender;
         return this.http.get(this.url);
     }
    Home() {
 
-    this.url = 'http://localhost:8083/api/v1/products';
+    this.url = 'https://shoefly-zuul.stackroute.io/recommendation-service/api/v1/products';
     console.log('this method call');
     return this.http.get(this.url);
 }
 
 openDailog() {
-    this.url = 'http://localhost:8083/api/v1/products';
+    this.url = 'https://shoefly-zuul.stackroute.io/recommendation-service/api/v1/products';
     return this.http.get(this.url);
 }
 AddToCart() {
-    this.url = 'http://localhost:8083/api/v1/products';
+    this.url = 'https://shoefly-zuul.stackroute.io/recommendation-service/api/v1/products';
     return this.http.get(this.url);
 }
 Buy(order: Order) {
@@ -48,16 +48,16 @@ Buy(order: Order) {
     return this.http.post(this.url, JSON.stringify(slot), this.httpOptions);
  }
 profile() {
-    this.url = 'http://localhost:8015/user-registration/api/v1/user/';
+    this.url = 'https://shoefly-zuul.stackroute.io/user-registration-service/api/v1/user/';
     return this.http.get(this.url);
 }
 REMOVE() {
-    this.url = 'http://localhost:8083/api/v1/AddToCart';
+    this.url = 'https://shoefly-zuul.stackroute.io/recommendation-service/api/v1/products';
     return this.http.get(this.url);
  }
 
  saveSlot(selectedSlot: SelectedSlot) {
-     this.url = 'http://13.234.142.187:8015/delivery-manager/v1/slotbooked';
+     this.url = 'https://ontrack-zuul.stackroute.io/delivery-manager/v1/slotbooked';
       return this.http.post(this.url, JSON.stringify(selectedSlot), this.httpOptions);
  }
 }
