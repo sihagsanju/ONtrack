@@ -51,7 +51,14 @@ ngOnInit() {
   });
  }
  buys() {
-   this.route.navigate([ '/', 'buys']);
+  //  this.route.navigate([ '/', 'buys']);;
+   this.cartAddEvent.emit(product);
+   this.searchService.cart = product;
+  this.route.navigateByUrl('/AddToCart');
+  this.db.list('/products').valueChanges().subscribe(data => {
+   console.log('data value', data);
+ });
+ this.db.list('/products').push(product);
  }
 
  openDialog(o): void {
